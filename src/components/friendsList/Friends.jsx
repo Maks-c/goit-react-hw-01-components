@@ -1,22 +1,16 @@
-import PropTypes from 'prop-types';
-import {Ul,Li,Image,Span,P} from "./friendsStyle";
 
-const Friends = ({items})=>{
+import {Ul} from "./friendsStyle";
+import FriendListItem from "../friendListItem/friendListItem";
+import PropTypes from "prop-types";
+
+const Friends = ({items}) => {
     return <Ul>
-        {items.map(item => (
-            <Li key={item.id} >
-                <Span isOnline={item.isOnline}> {item.isOnline}</Span>
-                <Image src={item.avatar} alt={item.name} /><P>{item.name}</P>
-
-            </Li>
-        ))}
+        <FriendListItem items={items}/>
     </Ul>
 }
 
-Friends.propTypes={
-    id: PropTypes.number,
-    isOnline: PropTypes.bool,
-    name: PropTypes.string,
+Friends.propTypes = {
+    items: PropTypes.array
 }
 
 export default Friends;

@@ -1,8 +1,11 @@
 import React from 'react';
-import {Li,Span} from '../userCard/UserCardStyle';
+import PropTypes from 'prop-types';
+import {Li,Span} from './UserCardStyle';
 const UserCardListItem = ({stats}) => {
+    console.log(stats)
     return <>
-            <Li>
+
+            <Li  >
                 <Span>Followers</Span>
                 <span>{stats.followers}</span>
             </Li>
@@ -16,5 +19,9 @@ const UserCardListItem = ({stats}) => {
             </Li>
     </>
 };
+
+// UserCardListItem.PropTypes({stats:PropTypes.shape().isRequired})
+
+
 
 export default UserCardListItem;

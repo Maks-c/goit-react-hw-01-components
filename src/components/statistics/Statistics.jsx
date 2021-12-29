@@ -20,9 +20,12 @@ import {H2,Ul,Li,Span} from "./statisticsStyle";
 
 
  Statistics.propTypes={
+     items:PropTypes.arrayOf(PropTypes.shape({
+         label: PropTypes.string.isRequired,
+         percentage: PropTypes.number.isRequired,
+     })).isRequired,
      title:PropTypes.string,
-     label: PropTypes.string,
-     percentage: PropTypes.number,
+
 
 }
 
