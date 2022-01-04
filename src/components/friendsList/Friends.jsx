@@ -1,15 +1,12 @@
-import {Image, Li, P, Span, Ul} from "./friendsStyle";
+import {Ul} from "./friendsStyle";
 import PropTypes from "prop-types";
 import React from "react";
+import FriendListItems from "./friendListItems";
 
 const Friends = ({items}) => {
     return <section>
         <Ul>
-            {items.map(({id, name, isOnline, avatar}) => (
-                <Li key={id}>
-                    <Span isOnline={isOnline}> {isOnline}</Span>
-                    <Image src={avatar} alt={name}/><P>{name}</P>
-                </Li>))}
+            <FriendListItems items={items}/>
         </Ul>
     </section>
 };

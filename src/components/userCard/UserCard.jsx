@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {Ul, Li, P, Span,DivProfile,Img} from './UserCardStyle';
 import React from "react";
 
-const UserCard = ({img, name, tag, location, stats}) => {
+const UserCard = ({img, name, tag, location, stats:{followers,views,likes}}) => {
 
     return <DivProfile>
         <div>
@@ -19,15 +19,15 @@ const UserCard = ({img, name, tag, location, stats}) => {
         <Ul>
             <Li>
                 <Span>Followers</Span>
-                <span>{stats.followers}</span>
+                <span>{followers}</span>
             </Li>
             <Li>
                 <Span>Views</Span>
-                <span>{stats.views}</span>
+                <span>{views}</span>
             </Li>
             <Li>
                 <Span>Likes</Span>
-                <span>{stats.likes}</span>
+                <span>{likes}</span>
             </Li>
         </Ul>
     </DivProfile>
