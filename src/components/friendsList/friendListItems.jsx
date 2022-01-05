@@ -1,15 +1,15 @@
 import React from "react";
-import {Image, Li, P, Span} from "./friendsStyle";
+import {Image, P, Span} from "./friendsStyle";
 
 
-const FriendListItems = ({items}) => {
+const FriendListItems = ({name, status, avatar}) => {
+    console.log(status)
     return (
         <>
-            {items.map(({id, name, isOnline, avatar}) => (
-                <Li key={id}>
-                    <Span isOnline={isOnline}> {isOnline}</Span>
-                    <Image src={avatar} alt={name}/><P>{name}</P>
-                </Li>))}
+            <Span status={status}>{status}</Span>
+            <Image src={avatar}/>
+            <P>{name}</P>
+
         </>
     );
 };

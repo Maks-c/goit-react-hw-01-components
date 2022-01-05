@@ -42,8 +42,8 @@ export const Span=styled.span`
   height: 25px;
   margin-left: 10px;
   border-radius: 5px;
-  background-color: ${({isOnline})=>{
-      return isOnline ?  'green' : `red`;
+  background-color: ${({status})=>{
+      return status ?  'green' : `red`;
   }
   };
   display: block;
